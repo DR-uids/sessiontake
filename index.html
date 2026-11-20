@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Session Take</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <button id="sidebar-toggle" class="icon-btn only-narrow" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <img class="brand-mark" src="logo.png" alt="" width="28" height="28">
+        <strong>Session Take</strong>
+      </div>
+      <div class="language" role="group" id="language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中文</button>
+        <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="side-top">
+          <label class="section-head" for="tool-select" data-label="tools">工具</label>
+          <select id="tool-select" class="tool-select"></select>
+        </div>
+        <section class="sessions-section" aria-labelledby="projects-label">
+          <h2 class="section-head" id="projects-label" data-label="projects">项目</h2>
+          <input id="session-search" class="search-input" type="search" maxlength="180" aria-controls="session-list">
+          <div id="session-list" class="session-list"></div>
+        </section>
+        <div class="side-foot"><span class="status-dot" aria-hidden="true"></span><span data-label="local">本地读取</span></div>
+      </aside>
+      <div class="backdrop" id="backdrop" hidden></div>
+      <main class="document" id="document" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

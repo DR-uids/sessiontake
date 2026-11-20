@@ -1,0 +1,37 @@
+# Local documentation and plugin
+/docs/
+/prd-writing-plugin/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+npm-debug.log*
+*.tsbuildinfo
+
+# Tauri build output and generated files
+src-tauri/target/
+src-tauri/gen/
+
+# macOS metadata
+.DS_Store
+
+# Local configuration, credentials and signing material
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pfx
+*.key
+*.pem
+.npmrc
+/.claude/
+/.codex/
+
+# Local session data, exports and release artifacts
+*.jsonl
+*.sqlite*
+*.db
+*.db-shm
+*.db-wal
+/release-output/

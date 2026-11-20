@@ -1,0 +1,11 @@
+- id: headless-runner
+  disabled: true
+- id: session-title-llm
+  disabled: true
+- insert:
+    # The headless profile omits the desktop Workspace registry; load it so a
+    # delivered Session can join the project instead of the ungrouped bucket.
+    - id: workspace
+      name: "@deepseek-ai/dsh-workspace"
+    - id: memtrans-handoff
+      name: ./handoff.mjs

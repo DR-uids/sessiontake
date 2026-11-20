@@ -1,0 +1,21 @@
+{
+  "name": "memtrans",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/frontend.mjs --dev",
+    "build": "tsc --noEmit && node scripts/frontend.mjs",
+    "test": "node scripts/test-projects.mjs && node scripts/test-transcript.mjs",
+    "release:mac": "sh scripts/build-dmg.sh",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "~5.9.0"
+  }
+}
